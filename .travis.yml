@@ -21,6 +21,7 @@ env:
 
 # Install system dependencies, namely a very barebones ROS setup.
 before_install:
+  - sudo apt-get install cmake
   - wget http://download.evocortex.com/libirimager-2.0.8-amd64.deb
   - sudo dpkg -i libirimager-2.0.8-amd64.deb && sudo apt -f install
   - sudo sh -c "echo \"deb http://packages.ros.org/ros/ubuntu $ROS_CI_DESKTOP main\" > /etc/apt/sources.list.d/ros-latest.list"
