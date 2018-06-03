@@ -28,6 +28,8 @@ before_install:
   - source /opt/ros/$ROS_DISTRO/setup.bash
   - sudo rosdep init
   - rosdep update
+  - wget http://download.evocortex.com/libirimager-2.0.8-amd64.deb
+  - sudo dpkg -i libirimager-2.0.8-amd64.deb && sudo apt -f install
 
 # Create a catkin workspace with the package under integration.
 install:
